@@ -1,0 +1,99 @@
+// theme color.
+$pageWidth: 1200px; // 页面宽度
+$contentWidth: 875px;// 内容宽度
+$FunctionNavWidth: 300px; //侧边栏宽度
+
+
+// HomePage
+$nameFont-size: 18px; //home 页面博客名称大小
+$nameFont-color: #676767; // 博客名称颜色
+$verseFont-size: 12px; // 签名字体大小
+$verseFont-color: #676767; // 签名字体颜色
+
+
+
+// 深色模式
+$dark-background: #202124; //暗色下背景
+$dark-background-opacity: rgba(32,33,36,.9); //带有穿透效果的背景颜色
+$dark-box-shadow: 0 8px 12px rgba(0, 0, 0, .08) ; //阴影
+$dark-background-color: hsla(0, 0%, 100%, .04) ; //主色-卡片色
+$dark-text-color: hsla(0, 0%, 100%, .4); // 普通字体颜色
+$dark-dividing-line-background-color: hsla(0, 0%, 100%, .04); // 分割线颜色
+$dark-stress-text-color: hsla(0,0%,100%,.8); // 强调字体颜色
+
+//浅色模式
+$light-background: #fff; //浅色下背景
+$light-background-opacity: hsla(0,0%,100%,.9); //带有穿透效果的背景颜色
+$light-dividing-line-background-color: #f5f5f5; // 分割线颜色
+$light-box-shadow: 0 8px 12px rgba(0,0,0,.08);// 阴影
+$light-stress-text-color: #333; //强调字体颜色
+
+// Other
+
+//Swirch
+$ThemeThemeAnimationTime: .5s; // 常用过度时间
+$SwitchThemeAnimationTime: 1s; //切换主题过度动画时间
+$switch-background-color-checked: #d1eaff; // 开关背景颜色 - 开启状态
+$switch-background-checked: #1890ff; //开关颜色 - 开启状态
+$switch-background-color: #e6e6e6; // 开关背景颜色 - 关闭状态
+$switch-background: #676767; //开关颜色 - 关闭状态
+$switch-background-color-disable: #e6e6e6; // 开关背景颜色 - 禁用状态
+$switch-background-disable: #676767; //开关颜色 - 禁用状态
+
+// Slider
+$slider-background: $switch-background-color; // 滑轨颜色
+$slider-background-progress: $switch-background-color-checked; // 滑轨进度背景颜色
+
+
+
+#app{
+    transition: background $SwitchThemeAnimationTime;
+}
+
+// theme
+// 浅色模式
+.light {
+    background-color: $light-background;
+
+    // 浅色模式下的分割线分割线
+    .dline {
+        background-color: $light-dividing-line-background-color;
+    }
+}
+//深色模式
+.dark {
+    background-color: $dark-background;
+    color: $dark-text-color;
+
+    // 深色模式下的分割线分割线
+    .dline {
+        background-color: $dark-dividing-line-background-color;
+    }
+    // 强调字体颜色
+    .stress-text{
+      color: $dark-stress-text-color;
+    }
+
+    svg {
+        opacity: .5;
+        transition: opacity $SwitchThemeAnimationTime;
+    }
+}
+
+// 分割线
+.dline {
+    transition: background-color 1s;
+    margin: 8px 0;
+    height: 1px;
+}
+
+//强调字体
+.stress-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.center{
+    margin: auto;
+}
